@@ -23,15 +23,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async defer></script>
   <!-- css -->
   <style>
-    #HomePageLoader_Section {
+   .HomePageLoader__loaderWrapper {
     position: fixed;
-    left: 0;
     top: 0;
-    width: 100%;
+    left: 0;
     height: 100%;
-    z-index: 100000000;
+    width: 100%;
+    z-index: 10000;
+    animation: loaderWrapper .1s linear 2s 1 both;
     background-color: #000;
+}
+.HomePageLoader__loaderSection.top {
+    top: 0;
+    animation: topSection 1.7s ease-in 1.4s 1 both;
+}
+.HomePageLoader__loaderSection.bottom {
     bottom: 0;
+    animation: bottomSection 1.7s ease-in 1.4s 1 both;
 }
   @media only screen and (max-width: 640px) {
      .jfman-logo-resize img{
